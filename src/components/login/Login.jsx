@@ -1,10 +1,30 @@
 import React from "react";
 import LoginCard from "./LoginCard";
+import styled from "styled-components";
+import LogoImg from "../../assets/symbol-logo-W.png";
 
+const LoginContainer = styled.main`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ea7f42;
+`;
+
+const LoginLogoImg = styled.img`
+  width: 144px;
+  height: 144px;
+  margin-bottom: 100px;
+`;
 export default function Login() {
   return (
-    <div>
-      <LoginCard />
-    </div>
+    <>
+      <LoginContainer>
+        <LoginLogoImg src={LogoImg} />
+        <LoginCard />
+      </LoginContainer>
+    </>
   );
 }
