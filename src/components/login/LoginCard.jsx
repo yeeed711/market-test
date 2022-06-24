@@ -4,7 +4,7 @@ import EmailIcon from "../../assets/full-logo.svg";
 
 const LoginBtn = styled.button`
   position: relative;
-  width: 290px;
+  width: 322px;
   height: 44px;
   background-color: #ffffff;
   color: #767676;
