@@ -7,7 +7,8 @@ const ImageFadeOut = keyframes`
     opacity: 1
   }
   to {
-    opacity: 0
+    opacity: 0;
+    visibility: hidden;
   }
 `;
 

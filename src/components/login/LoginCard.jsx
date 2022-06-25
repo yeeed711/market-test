@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import EmailIcon from "../../assets/full-logo.svg";
 
@@ -38,13 +39,17 @@ const LoginList = styled.ul`
 
 export default function LoginCard() {
   return (
-    <LoginList>
-      <LoginItem>
-        <LoginBtn>이메일로 로그인</LoginBtn>
-      </LoginItem>
-      <LoginItem>
-        <LoginBtn>회원가입</LoginBtn>
-      </LoginItem>
-    </LoginList>
+    <>
+      <LoginList>
+        <LoginItem>
+          <Link to="/login">
+            <LoginBtn>이메일로 로그인</LoginBtn>
+          </Link>
+        </LoginItem>
+        <LoginItem>
+          <LoginBtn>회원가입</LoginBtn>
+        </LoginItem>
+      </LoginList>
+    </>
   );
 }

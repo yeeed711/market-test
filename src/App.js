@@ -1,6 +1,6 @@
-import Login from "./components/login/Login";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import LoginHome from "./pages/LoginHome";
 
 const GlobalStyle = createGlobalStyle`
 ${reset}
@@ -62,7 +62,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Login />
+      <LoginHome />
     </>
   );
 }
