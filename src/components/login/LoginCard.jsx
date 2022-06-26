@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import EmailIcon from "../../assets/full-logo.svg";
+import EmailIcon from "../../assets/icon/icon-email.svg";
+import SignUpIcon from "../../assets/icon/icon-signup.svg";
 
 const LoginBtn = styled.button`
   position: relative;
@@ -26,7 +27,7 @@ const LoginBtn = styled.button`
 `;
 
 const LoginItem = styled.li`
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 `;
 
 const LoginList = styled.ul`
@@ -37,17 +38,23 @@ const LoginList = styled.ul`
   align-items: center;
 `;
 
+const SignUpBtn = styled(LoginBtn)`
+  &::before {
+    background: url(${SignUpIcon}) no-repeat center / 24px 24px;
+  }
+`;
+
 export default function LoginCard() {
   return (
     <>
       <LoginList>
         <LoginItem>
           <Link to="/login">
-            <LoginBtn>이메일로 로그인</LoginBtn>
+            <LoginBtn name="email">이메일로 로그인</LoginBtn>
           </Link>
         </LoginItem>
         <LoginItem>
-          <LoginBtn>회원가입</LoginBtn>
+          <SignUpBtn name="signUp">회원가입</SignUpBtn>
         </LoginItem>
       </LoginList>
     </>

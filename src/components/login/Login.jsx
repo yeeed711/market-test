@@ -2,7 +2,7 @@ import React from "react";
 import LoginCard from "./LoginCard";
 import styled from "styled-components";
 import LogoImg from "../../assets/symbol-logo-W.png";
-import LoginSplash from "./Splash";
+import LoginSplash from "../splash/Splash";
 
 const LoginContainer = styled.main`
   width: 100%;
