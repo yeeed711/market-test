@@ -22,7 +22,11 @@ const LoginBtn = styled.button`
     width: 24px;
     height: 24px;
     transform: translateY(-50%);
-    background: url(${EmailIcon}) no-repeat center / 24px 24px;
+    background-image: ${(props) =>
+      props.name === "email" ? `url(${EmailIcon})` : `url(${SignUpIcon})`};
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 24px;
   }
 `;
 
@@ -38,12 +42,6 @@ const LoginList = styled.ul`
   align-items: center;
 `;
 
-const SignUpBtn = styled(LoginBtn)`
-  &::before {
-    background: url(${SignUpIcon}) no-repeat center / 24px 24px;
-  }
-`;
-
 export default function LoginCard() {
   return (
     <>
@@ -54,7 +52,7 @@ export default function LoginCard() {
           </Link>
         </LoginItem>
         <LoginItem>
-          <SignUpBtn name="signUp">회원가입</SignUpBtn>
+          <LoginBtn name="signUp">회원가입</LoginBtn>
         </LoginItem>
       </LoginList>
     </>

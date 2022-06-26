@@ -83,7 +83,7 @@ export default function LoginEmail() {
             placeholder="비밀번호를 입력해 주세요."
             required
           />
-          <LoginBtn>로그인</LoginBtn>
+          <LoginBtn type="button">로그인</LoginBtn>
           <EmailSign href="#none">이메일로 회원가입</EmailSign>
         </Fieldset>
       </LoginForm>
